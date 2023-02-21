@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Healthcare application</string>
+    <string name="text1">Day To Night Healthcare</string>
+    <string name="Text4">Register Here</string>
 </resources>

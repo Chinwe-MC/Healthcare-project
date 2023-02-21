@@ -1,4 +1,4 @@
-package c2078913.healthcareapplicstion;
+package c2078913.healthcareapplication;
 
 import android.content.Context;
 
