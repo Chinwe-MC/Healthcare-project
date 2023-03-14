@@ -12,14 +12,9 @@
         android:theme="@style/Theme.HealthcareApplication"
         tools:targetApi="31">
         <activity
-            android:name=".RegistrationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginPage"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name="c2078913.healthcareapplication.LoginActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
