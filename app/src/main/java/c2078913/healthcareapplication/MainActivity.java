@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(MainActivity.this, LoginPage.class));
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
             finish();
 
         }, 2000);
