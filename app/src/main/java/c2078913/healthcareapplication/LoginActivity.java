@@ -29,14 +29,20 @@ public class LoginActivity extends AppCompatActivity {
         tv = findViewById(R.id.RegisterHere);
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 String Username = edUsername.getText().toString();
                 String Password = edPassword.getText().toString();
-                if(Username.length()==0 || Password.length()==0){
-                Toast.makeText(getApplicationContext(), "Please fill all the details", Toast.LENGTH_SHORT).show();
+                Database db = new Database(getApplicationContext(), "healthcare", null, 1);
+                if (Username.length() == 0 || Password.length() == 0) {
+                    Toast.makeText(getApplicationContext(), "Please fill all the details", Toast.LENGTH_SHORT).show();
 
-            }else {
-                    Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (db.Login(Username, Password) == 1) {
+                        Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(LoginActivity.this, HomeActivity2.class));
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Invalid Username and Password", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });

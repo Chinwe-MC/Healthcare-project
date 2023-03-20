@@ -12,20 +12,23 @@
         android:theme="@style/Theme.HealthcareApplication"
         tools:targetApi="31">
         <activity
-            android:name="c2078913.healthcareapplication.MainActivity"
+            android:name=".HomeActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="c2078913.healthcareapplication.RegistrationActivity"
-            android:label ="@string/app_name"/>
-
-        <activity android:name="c2078913.healthcareapplication.LoginActivity"
-            android:label ="@string/app_name"/>
+        <activity
+            android:name=".RegistrationActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
