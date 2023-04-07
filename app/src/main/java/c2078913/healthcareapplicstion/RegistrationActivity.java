@@ -1,4 +1,4 @@
-package c2078913.healthcareapplication;
+package c2078913.healthcareapplicstion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import c2078913.healthcareapplicstion.R;
 
 public class RegistrationActivity extends AppCompatActivity {
     EditText edUsername, edEmail, edPassword, edConfirm;

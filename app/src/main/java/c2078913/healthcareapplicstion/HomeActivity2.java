@@ -1,10 +1,8 @@
-package c2078913.healthcareapplication;
+package c2078913.healthcareapplicstion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import c2078913.healthcareapplicstion.R;
 
 public class HomeActivity2 extends AppCompatActivity {
 

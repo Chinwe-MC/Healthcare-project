@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3F7198"
-    tools:context="c2078913.healthcareapplication.RegistrationActivity">
+    tools:context="c2078913.healthcareapplicstion.RegistrationActivity">
 
     <EditText
         android:id="@+id/editTextRegConfirmPassword"

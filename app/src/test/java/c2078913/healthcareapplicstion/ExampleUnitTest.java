@@ -1,4 +1,4 @@
-package c2078913.healthcareapplication;
+package c2078913.healthcareapplicstion;
 
 import org.junit.Test;
 
