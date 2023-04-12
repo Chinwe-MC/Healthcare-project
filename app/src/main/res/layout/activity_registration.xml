@@ -8,7 +8,7 @@
     tools:context="c2078913.healthcareapplicstion.RegistrationActivity">
 
     <EditText
-        android:id="@+id/editTextRegConfirmPassword"
+        android:id="@+id/ConfirmPassword"
         android:layout_width="308dp"
         android:layout_height="52dp"
         android:layout_marginTop="30dp"
@@ -28,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <EditText
-        android:id="@+id/editTextRegPassword"
+        android:id="@+id/Password"
         android:layout_width="308dp"
         android:layout_height="52dp"
         android:layout_marginTop="30dp"
@@ -51,10 +51,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
 
     <EditText
-        android:id="@+id/editTextRegEmail"
+        android:id="@+id/Email"
         android:layout_width="306dp"
         android:layout_height="52dp"
         android:layout_marginTop="30dp"
@@ -74,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/Username" />
 
     <TextView
         android:id="@+id/Registration"
@@ -110,7 +110,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/Register"
         android:layout_width="229dp"
         android:layout_height="50dp"
         android:layout_marginTop="64dp"
@@ -123,11 +123,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmPassword"
         app:rippleColor="#03A9F4" />
 
     <EditText
-        android:id="@+id/editTextRegUsername"
+        android:id="@+id/Username"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
@@ -161,7 +161,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterHere"
+        app:layout_constraintTop_toBottomOf="@+id/Register"
         app:layout_constraintVertical_bias="1.0" />
 
 

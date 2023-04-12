@@ -13,10 +13,15 @@ public class Database extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String qry1 = "create table users(username text, email text, password text)";
         sqLiteDatabase.execSQL(qry1);
+
+
+        String qry2 = "create table cart(username text, product text, price float,otype text)";
+        sqLiteDatabase.execSQL(qry2);
     }
 
     @Override
@@ -44,7 +49,42 @@ public class Database extends SQLiteOpenHelper {
         if (c.moveToFirst()) {
             result = 1;
         }
-            return result;
+        return result;
+    }
+
+    public void addCart(String username, String product, float price, String otype) {
+        ContentValues cv = new ContentValues();
+        cv.put("username", username);
+        cv.put("product", product);
+        cv.put("price", price);
+        cv.put("otype", otype);
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert("cart", null, cv);
+        db.close();
+
+    }
+
+    public int checkcart(String username, String product) {
+        int result = 0;
+        String str[] = new String[2];
+        str[0] = username;
+        str[1] = product;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("select * from Cart where username = ? and product = ?", str);
+        if (c.moveToFirst()) {
+            result = 1;
         }
 
+        db.close();
+        return result;
+    }
+
+    public void removeCart(String username, String otype) {
+        String str[] = new String[2];
+        str[0] = username;
+        str[1] = otype;
+        SQLiteDatabase db = getReadableDatabase();
+        db.delete("cart", "username = ? and otype= ?", str);
+        db.close();
+    }
 }

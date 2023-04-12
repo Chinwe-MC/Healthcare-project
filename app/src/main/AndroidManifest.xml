@@ -12,30 +12,36 @@
         android:theme="@style/Theme.HealthcareApplication"
         tools:targetApi="31">
         <activity
-            android:name="c2078913.healthcareapplicstion.MainActivity"
-            android:exported ="true">
+            android:name=".LabTestDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LabTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AppointmentBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".findDoctor"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
-                android:value =""/>
+                android:value="" />
+
             <intent-filter>
                 <action android:name="android.intent.action.Main" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="c2078913.healthcareapplicstion.HomeActivity2"/>
-
-        <activity
-            android:name="c2078913.healthcareapplicstion.RegistrationActivity"/>
-
-        <activity
-            android:name="c2078913.healthcareapplicstion.LoginActivity"/>
-
-
-
-
-
-
+        <activity android:name=".HomeActivity2" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
