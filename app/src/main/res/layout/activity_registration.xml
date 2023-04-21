@@ -8,7 +8,7 @@
     tools:context="c2078913.healthcareapplicstion.RegistrationActivity">
 
     <EditText
-        android:id="@+id/ConfirmPassword"
+        android:id="@+id/ContactNumber"
         android:layout_width="308dp"
         android:layout_height="52dp"
         android:layout_marginTop="30dp"
@@ -28,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/Code" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/Code"
         android:layout_width="308dp"
         android:layout_height="52dp"
         android:layout_marginTop="30dp"
@@ -51,10 +51,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintTop_toBottomOf="@+id/BookingAddress" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/BookingAddress"
         android:layout_width="306dp"
         android:layout_height="52dp"
         android:layout_marginTop="30dp"
@@ -74,10 +74,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username" />
+        app:layout_constraintTop_toBottomOf="@+id/BookingName" />
 
     <TextView
-        android:id="@+id/Registration"
+        android:id="@+id/Booking"
         android:layout_width="188dp"
         android:layout_height="54dp"
         android:layout_marginTop="40dp"
@@ -110,7 +110,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <Button
-        android:id="@+id/Register"
+        android:id="@+id/EnterBooking"
         android:layout_width="229dp"
         android:layout_height="50dp"
         android:layout_marginTop="64dp"
@@ -123,11 +123,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/ContactNumber"
         app:rippleColor="#03A9F4" />
 
     <EditText
-        android:id="@+id/Username"
+        android:id="@+id/BookingName"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
@@ -147,7 +147,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Registration" />
+        app:layout_constraintTop_toBottomOf="@+id/Booking" />
 
     <TextView
         android:id="@+id/ExistingUser"
@@ -161,7 +161,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Register"
+        app:layout_constraintTop_toBottomOf="@+id/EnterBooking"
         app:layout_constraintVertical_bias="1.0" />
 
 

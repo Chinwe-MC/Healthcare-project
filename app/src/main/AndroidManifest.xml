@@ -12,6 +12,15 @@
         android:theme="@style/Theme.HealthcareApplication"
         tools:targetApi="31">
         <activity
+            android:name=".OrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LabtestBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CartdetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".LabTestDetailsActivity"
             android:exported="false" />
         <activity
