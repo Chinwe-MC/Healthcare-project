@@ -19,7 +19,7 @@ public class HomeActivity2 extends AppCompatActivity {
 
         SharedPreferences sp = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         String username = sp.getString("username", "").toString();
-        Toast.makeText(getApplicationContext(), "Welcome" + username, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Welcome " + username, Toast.LENGTH_SHORT).show();
 
         CardView exit = findViewById(R.id.cardExit);
         exit.setOnClickListener(new View.OnClickListener() {
@@ -53,10 +53,18 @@ public class HomeActivity2 extends AppCompatActivity {
         });
 
         CardView OrderDetails = findViewById((R.id.cardOrderDetails));
-        OrderDetails.setOnClickListener(new View.OnClickListener(){
+        OrderDetails.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 startActivity(new Intent(HomeActivity2.this, OrderDetailsActivity.class));
+            }
+        });
+
+        CardView BuyMedicine = findViewById((R.id.cardBuyMedicine));
+        BuyMedicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity2.this, BuyMedicineActivity.class));
             }
         });
     }

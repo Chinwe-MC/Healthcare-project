@@ -126,25 +126,28 @@ public class Database extends SQLiteOpenHelper {
         cv.put("price", price);
         cv.put("otype", otype);
         SQLiteDatabase db = getWritableDatabase();
-        db.insert("orderplace", null,cv);
+        db.insert("orderplace", null, cv);
         db.close();
     }
-    public ArrayList getOrderData(String username){
+
+    public ArrayList getOrderData(String username) {
         ArrayList<String> arr = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
         String str[] = new String[1];
         str[0] = username;
         Cursor c = db.rawQuery("select * from orderplace where username = ?", str);
-        if(c.moveToFirst()) {
-            do{
-                arr.add(c.getString(1) + "S" + c.getString(2) + "s" + c.getString(3) + "s" + c.getString(4) + "s" + c.getString(5) + "s" + c.getString(6) + "s" + c.getString(7) + "s" + c.getString(8));
+            if (c.moveToFirst()) {
+                do {
+                    arr.add(c.getString(1) + "$" + c.getString(2) + "$" + c.getString(3) + "$" + c.getString(4) + "$" + c.getString(5) + "$" + c.getString(6) + "$" + c.getString(7) + "$" + c.getString(8));
+                }
+                while (c.moveToNext());
             }
-            while (c.moveToNext()) ;
+
+            db.close();
+            return arr;
         }
-        db.close();
-        return arr;
-            }
-        }
+
+}
 
 
 
