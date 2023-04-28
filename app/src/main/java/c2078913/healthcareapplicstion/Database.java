@@ -25,8 +25,11 @@ public class Database extends SQLiteOpenHelper {
         String qry2 = "create table cart(username text, product text, price float,otype text)";
         sqLiteDatabase.execSQL(qry2);
 
-        String qry3 = "create table orderplace(username text, fullname text, address text, contactno text,pincode text,date text, time text,price Float,otype text)";
+        String qry3 = "create table orderplace(username text, fullname text, address text, contact text,pincode text,date text, time text,price Float,otype text)";
         sqLiteDatabase.execSQL(qry3);
+
+        String qry4 ="create table appointplace(username text, fullname text, address text, contact text, date text, time text, price Float, otype text)";
+        sqLiteDatabase.execSQL(qry4);
     }
 
 
@@ -115,9 +118,10 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
-    public void addOrder(String username, String address, String contactno, String pincode, String date, String time, Float price, String otype) {
+    public void addOrder(String username, String Fullname, String address, String contactno, String pincode, String date, String time, Float price, String otype) {
         ContentValues cv = new ContentValues();
         cv.put("username", username);
+        cv.put("Fullname", Fullname);
         cv.put("address", address);
         cv.put("contactno", contactno);
         cv.put("pincode", pincode);
@@ -129,6 +133,25 @@ public class Database extends SQLiteOpenHelper {
         db.insert("orderplace", null, cv);
         db.close();
     }
+    public int checkappointmentExist(String username, String fullname, String address, String contact, String date, String time) {
+        int result = 0;
+        String str[]= new String[6];
+        str[0]= username;
+        str[1]=fullname;
+        str[2]= address;
+        str[3]= contact;
+        str[4]= date;
+        str[5]= time;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("select * from appointplace where username = ? and fullname = ? and address = ? and contact=? and date = ? and time = ?", str);
+        if(c.moveToFirst()) {
+            result = 1;
+        }
+        db.close();
+        return result;
+
+    }
+
 
     public ArrayList getOrderData(String username) {
         ArrayList<String> arr = new ArrayList<>();
@@ -146,6 +169,8 @@ public class Database extends SQLiteOpenHelper {
             db.close();
             return arr;
         }
+
+
 
 }
 
