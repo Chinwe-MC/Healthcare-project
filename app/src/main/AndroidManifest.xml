@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisiion.READ_GSERVICES" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthcareApplication"
         tools:targetApi="31">
+
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -28,6 +33,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAt-OdrNKYZxwdWA17Tg7R1DnFMFLLQeC0" />
 
+        <activity
+            android:name=".Findnearbyplaces"
+            android:exported="false"
+            android:label="@string/title_activity_findnearbyplaces" />
         <activity
             android:name=".BuyMedicineBookActivity"
             android:exported="false" />
