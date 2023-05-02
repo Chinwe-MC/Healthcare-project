@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".HealthTipsActivity">
+
+    <LinearLayout
+        android:id="@+id/LLH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btncovid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Covid-19"
+            android:drawableLeft="@drawable/baseline_coronavirus_24"/>
+
+        <Button
+            android:id="@+id/btnwater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Walking"
+            android:drawableLeft="@drawable/baseline_directions_run_24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="685dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/framelayoutfrag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back1">
+
+            <ListView
+                android:id="@+id/listviewH"
+                android:layout_width="wrap_content"
+                android:layout_height="500dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LLH"
+                />
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

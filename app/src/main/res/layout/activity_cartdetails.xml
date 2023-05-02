@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CartdetailsActivity">
+
+    <Button
+        android:id="@+id/CartBtn"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:text="Checkout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDoctorDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROHEALTH"
+        android:textColor="#F4F4F4"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/CartItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab Test Cart Items"
+        android:textColor="#F4F4F4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDoctorDetailName"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <TextView
+        android:id="@+id/CartDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Location: Abuja"
+        android:textColor="#F4F4F4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CartItems"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <ListView
+        android:id="@+id/ListViewCart"
+        android:layout_width="350dp"
+        android:layout_height="307dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CartDetails"
+        app:layout_constraintVertical_bias="0.0" >
+
+
+
+    </ListView>
+
+
+    <Button
+        android:id="@+id/CartDetailsBack"
+        android:layout_width="140dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Deliverydate"
+        android:layout_width="134dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:text="Delivery date"
+        android:textColor="#FFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewCart" />
+
+    <TextView
+        android:id="@+id/deliverytime"
+        android:layout_width="134dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="96dp"
+        android:text="Delivery Time"
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toEndOf="@+id/Deliverydate"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewCart" />
+
+    <Button
+        android:id="@+id/Deliverydatebtn"
+        android:layout_width="137dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="13/04/2023"
+        app:layout_constraintBottom_toTopOf="@+id/CartBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Deliverydate"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:id="@+id/CartdetailsTotalCost"
+        android:layout_width="181dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="36dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewCart"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/deliverytimebutton"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="28dp"
+        android:text="12:00"
+        app:layout_constraintBottom_toTopOf="@+id/CartDetailsBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Deliverydatebtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
